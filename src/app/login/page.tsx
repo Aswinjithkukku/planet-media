@@ -2,10 +2,9 @@ import LoginBanner from "@/images/login-banner.png";
 import Image from "next/image";
 import LoginHandler from "./LoginHandler";
 import Logo from "@/shared/Logo";
-
+import Link from "next/link";
 
 function LoginPage() {
-
 	//
 	const LoginSection = () => {
 		return (
@@ -19,7 +18,9 @@ function LoginPage() {
 				<div className="text-secondaryColor flex justify-center gap-2 font-light text-[14px]">
 					<span className="">LOGIN</span>
 					<span className="">OR</span>
-					<span className="font-normal underline">SHOP</span>
+					<Link href={"/shop"} className="font-normal underline">
+						SHOP
+					</Link>
 				</div>
 			</div>
 		);

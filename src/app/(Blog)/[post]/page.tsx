@@ -16,7 +16,7 @@ const PostDetailPage: React.FC<PostDetailPageProps> = async ({ params }) => {
 	let token =
 		"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsIm5hbWUiOiJ3cGN1c3RvbWVyIiwiaWF0IjoxNzA5NTI0NTQ3LCJleHAiOjE4NjcyMDQ1NDd9.MUtnWUPTBB3pKDrdNP610WRlwy9YpmRZdLalbO6vWq0";
 	const response = await fetch(
-		`${process.env.NEXT_PUBLIC_SERVER_URL}/posts/${post}`,
+		`${process.env.NEXT_PUBLIC_SERVER_URL}/wp/v2/posts/${post}`,
 		{
 			method: "GET",
 			headers: {
@@ -29,7 +29,7 @@ const PostDetailPage: React.FC<PostDetailPageProps> = async ({ params }) => {
 	const data: Post = await response.json();
 
 	const imageResponse = await fetch(
-		`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${data.featured_media}`,
+		`${process.env.NEXT_PUBLIC_SERVER_URL}/wp/v2/media/${data.featured_media}`,
 		{
 			method: "GET",
 			headers: {

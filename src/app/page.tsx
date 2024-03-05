@@ -10,7 +10,7 @@ const LandingPage = async () => {
 	let token =
 		"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsIm5hbWUiOiJ3cGN1c3RvbWVyIiwiaWF0IjoxNzA5NTI0NTQ3LCJleHAiOjE4NjcyMDQ1NDd9.MUtnWUPTBB3pKDrdNP610WRlwy9YpmRZdLalbO6vWq0";
 	const response = await fetch(
-		`${process.env.NEXT_PUBLIC_SERVER_URL}/posts/`,
+		`${process.env.NEXT_PUBLIC_SERVER_URL}/wp/v2/posts/`,
 		{
 			method: "GET",
 			headers: {
@@ -20,7 +20,7 @@ const LandingPage = async () => {
 		}
 	);
 
-	const data: Post[] = await response.json();
+	const data: Post[] = await response.json() ;
 
 	//
 	const singleCard = (item: Post) => {

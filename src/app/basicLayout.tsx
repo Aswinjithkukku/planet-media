@@ -4,7 +4,7 @@ import { ReduxProvider } from "@/redux/provider";
 
 function BasicLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<div>
+		<div className="bg-secondaryColor">
 			<ReduxProvider>{children}</ReduxProvider>
 		</div>
 	);

@@ -1,4 +1,5 @@
 import Logo from "@/shared/Logo";
+import Link from "next/link";
 import { BsHandbag } from "react-icons/bs";
 import { IoExitOutline } from "react-icons/io5";
 
@@ -6,22 +7,22 @@ const Header = () => {
 	return (
 		<div className="bg-secondaryColor font-secondarycode text-primaryColor">
 			<div className="flex justify-between gap-2 py-4 max-w-screen-xl mx-auto">
-				<div className="flex items-center gap-1">
+				<Link href={"/shop"} className="flex items-center gap-1">
 					<span>
 						<BsHandbag />
 					</span>
 					<span>Shop</span>
-				</div>
+				</Link>
 				<div className="">
 					<Logo colour="primary" />
 				</div>
-				<div className="flex items-center gap-1">
+				<Link href={"/login"} className="flex items-center gap-1">
 					{" "}
-					<span>Login</span>
+					<span>Logout</span>
 					<span>
 						<IoExitOutline />
 					</span>
-				</div>
+				</Link>
 			</div>
 		</div>
 	);
